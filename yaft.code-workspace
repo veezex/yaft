@@ -1,0 +1,17 @@
+{
+    "folders": [
+        {
+            "path": "./"
+        }
+    ],
+    "settings": {},
+    "extensions": {
+        "recommendations": [
+            "formulahendry.auto-rename-tag",
+            "dbaeumer.vscode-eslint",
+            "esbenp.prettier-vscode",
+            "Vue.volar",
+            "Vue.vscode-typescript-vue-plugin"
+        ]
+    }
+}
