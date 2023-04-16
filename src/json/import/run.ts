@@ -8,7 +8,7 @@ if (process.argv.length < 3) {
 }
 
 const dest = './src/json/files'
-const filesList = ['metaGroups.yaml', 'typeIDs.yaml']
+const filesList = ['metaGroups.yaml', 'typeIDs.yaml', 'marketGroups.yaml']
 
 // remove old db
 rimrafSync(dest)

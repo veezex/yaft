@@ -11,7 +11,7 @@
     "build-only": "vite build",
     "check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false && eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "db:import": "ts-node src/json/script/run.ts"
+    "json:import": "ts-node src/json/import/run.ts"
   },
   "dependencies": {
     "@mdi/font": "7.0.96",
