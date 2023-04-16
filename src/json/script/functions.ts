@@ -1,9 +1,9 @@
-const fs = require('node:fs')
-const path = require('node:path')
-const yaml = require('js-yaml')
+import fs from 'node:fs'
+import path from 'node:path'
+import yaml from 'js-yaml'
 
-function getAllFiles(dirPath, input: string[] = []) {
-  const files = fs.readdirSync(dirPath)
+function getAllFiles(dirPath: string, input: string[] = []) {
+  const files: string[] = fs.readdirSync(dirPath)
 
   let arrayOfFiles = input || []
 
@@ -18,26 +18,17 @@ function getAllFiles(dirPath, input: string[] = []) {
   return arrayOfFiles
 }
 
-function printLine(line) {
+function printLine(line: string) {
   process.stdout.clearLine(0)
   process.stdout.cursorTo(0)
   process.stdout.write(line)
 }
 
-export function importFrom(
-  dir: string,
-  outputDir: string,
-  filter: (path: string) => boolean,
-  handle: (name: string, content: string) => Promise<void>,
-) {
+export function importFrom(dir: string, outputDir: string, filter: (path: string) => boolean) {
   const files = getAllFiles(dir).filter(filter)
   let counter = 0
 
   for (const file of files) {
-    if (/DS_Store/.test(file)) {
-      continue // skip DS_Store (macOS)
-    }
-
     const fileContent = fs.readFileSync(file, 'utf8')
     // const dirName = path.dirname(file).replace(dir, outputDir)
     const baseName = path.parse(file).name
@@ -51,8 +42,6 @@ export function importFrom(
     const name = dirName + path.sep + baseName + '.json'
 
     fs.writeFileSync(name, result)
-
-    handle(name, result)
   }
 }
 

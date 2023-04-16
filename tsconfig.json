@@ -1,4 +1,9 @@
 {
+  "ts-node": {
+    "compilerOptions": {
+      "esModuleInterop": true
+    }
+  },
   "files": [],
   "references": [
     {

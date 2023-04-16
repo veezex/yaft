@@ -5,8 +5,8 @@
     "vitest.config.*",
     "cypress.config.*",
     "playwright.config.*",
-    "./import-db/run.ts",
-    "./import-db/functions.ts"
+    "./src/import-db/run.ts",
+    "./src/import-db/functions.ts"
   ],
   "compilerOptions": {
     "composite": true,
