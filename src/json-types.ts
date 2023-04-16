@@ -1,3 +1,7 @@
+// metaGroups
+
+export type MetaGroupsFile = Record<string, MetaGroups>
+
 export interface MetaGroups {
     nameID:         ID;
     iconID?:        number;
@@ -15,4 +19,5 @@ export interface ID {
     ru: string;
     zh: string;
 }
+
 

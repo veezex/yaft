@@ -1,4 +1,4 @@
-import { importFrom } from './functions'
+import { capitalize, importFrom } from './functions'
 import { quicktype, InputData, jsonInputForTargetLanguage } from 'quicktype-core'
 const { rimrafSync } = require('rimraf')
 const path = require('node:path')
@@ -11,6 +11,7 @@ if (process.argv.length < 3) {
 
 const dest = './public/json-db'
 const typesDest = './src/json-types.ts'
+const filesList = ['metaGroups.yaml']
 
 // remove old db
 rimrafSync(dest)
@@ -23,12 +24,13 @@ importFrom(
   path.resolve(process.argv[2]),
   path.resolve(dest),
   (p) => {
-    return ['metaGroups.yaml'].some((f) => p.endsWith(f))
+    return filesList.some((f) => p.endsWith(f))
   },
   async (fileName, content) => {
     const jsonInput = jsonInputForTargetLanguage('typescript')
+    const name = extractTypeName(fileName)
     await jsonInput.addSource({
-      name: extractTypeName(fileName),
+      name,
       samples: [content],
     })
 
@@ -44,7 +46,12 @@ importFrom(
       },
     })
 
-    fs.appendFileSync(typesDest, types.lines.join('\n') + '\n')
+    const fileType = `export type ${capitalize(name)}File = Record<string, ${capitalize(name)}>`
+
+    fs.appendFileSync(
+      typesDest,
+      `// ${name}\n\n` + fileType + '\n\n' + types.lines.join('\n') + '\n\n',
+    )
   },
 )
 

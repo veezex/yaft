@@ -39,13 +39,14 @@ export function importFrom(
     }
 
     const fileContent = fs.readFileSync(file, 'utf8')
-    const dirName = path.dirname(file).replace(dir, outputDir)
+    // const dirName = path.dirname(file).replace(dir, outputDir)
     const baseName = path.parse(file).name
+    const dirName = outputDir
 
     printLine(`${file} (${++counter} of ${files.length})`)
     const parsed = yaml.load(fileContent)
 
-    fs.mkdirSync(dirName, { recursive: true }) 
+    fs.mkdirSync(dirName, { recursive: true })
     const result = JSON.stringify(parsed)
     const name = dirName + path.sep + baseName + '.json'
 
@@ -53,4 +54,8 @@ export function importFrom(
 
     handle(name, result)
   }
+}
+
+export function capitalize(input: string): string {
+  return input.charAt(0).toUpperCase() + input.slice(1)
 }
