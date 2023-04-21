@@ -24,7 +24,14 @@ function printLine(line: string) {
   process.stdout.write(line)
 }
 
-export function importFrom(dir: string, outputDir: string, filter: (path: string) => boolean) {
+interface ImportOptions {
+  dir: string
+  outputDir: string
+  filter: (path: string) => boolean
+  modify: (fileName: string, data: unknown) => unknown
+}
+
+export function importFrom({ dir, outputDir, filter, modify }: ImportOptions) {
   const files = getAllFiles(dir).filter(filter)
   let counter = 0
 
@@ -35,7 +42,10 @@ export function importFrom(dir: string, outputDir: string, filter: (path: string
     const dirName = outputDir
 
     printLine(`${file} (${++counter} of ${files.length})`)
-    const parsed = yaml.load(fileContent)
+    let parsed = yaml.load(fileContent)
+
+    // modify data
+    parsed = modify(file, parsed)
 
     fs.mkdirSync(dirName, { recursive: true })
     const result = JSON.stringify(parsed)

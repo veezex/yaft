@@ -1,6 +1,7 @@
 import { importFrom } from './functions'
 import { rimrafSync } from 'rimraf'
 import path from 'node:path'
+import { mMarketGroups } from './mappers/mMarketGroups'
 
 // execution block
 if (process.argv.length < 3) {
@@ -14,6 +15,14 @@ const filesList = ['metaGroups.yaml', 'typeIDs.yaml', 'marketGroups.yaml']
 rimrafSync(dest)
 
 // import new db
-importFrom(path.resolve(process.argv[2]), path.resolve(dest), (p) => {
-  return filesList.some((f) => p.endsWith(f))
+importFrom({
+  dir: path.resolve(process.argv[2]),
+  outputDir: path.resolve(dest),
+  filter: (p) => filesList.some((f) => p.endsWith(f)),
+  modify: (fileName, data) => {
+    if (fileName.endsWith('marketGroups.yaml')) {
+      return mMarketGroups(data)
+    }
+    return data
+  },
 })
