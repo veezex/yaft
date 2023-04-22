@@ -32,8 +32,9 @@ export function mMarketGroups(input: unknown): Record<string, unknown> {
     11,  # Ammunition & Charges
     1112,  # Subsystems
     24,  # Implants & Boosters
+    150, # Skill Books
   */
-  const rootCategories = ['4', '9', '1111', '157', '11', '1112', '24']
+  const rootCategories = ['4', '9', '1111', '157', '11', '1112', '24', '150']
 
   if (!isObject(input)) {
     throw new Error('Input is not an object')

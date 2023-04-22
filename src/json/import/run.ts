@@ -12,7 +12,12 @@ if (process.argv.length < 3) {
 const dest = './src/json/files'
 
 // only import these files with the given order
-const filesList = ['metaGroups.yaml', 'marketGroups.yaml', 'typeIDs.yaml']
+const filesList = [
+  'metaGroups.yaml',
+  'marketGroups.yaml',
+  'typeIDs.yaml',
+  'dogmaAttributeCategories.yaml',
+]
 
 // remove old db
 rimrafSync(dest)
