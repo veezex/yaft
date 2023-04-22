@@ -27,12 +27,12 @@ function printLine(line: string) {
 interface ImportOptions {
   dir: string
   outputDir: string
-  filter: (path: string) => boolean
+  filter: (files: string[]) => string[]
   modify: (fileName: string, data: unknown) => unknown
 }
 
 export function importFrom({ dir, outputDir, filter, modify }: ImportOptions) {
-  const files = getAllFiles(dir).filter(filter)
+  const files = filter(getAllFiles(dir))
   let counter = 0
 
   for (const file of files) {

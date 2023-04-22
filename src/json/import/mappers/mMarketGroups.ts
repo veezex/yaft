@@ -1,6 +1,5 @@
 import { isObject } from '../util'
 
-// todo: use io-ts
 function categoriesToKeep(input: Record<string, unknown>, rootCategories: string[]): string[] {
   if (!rootCategories.length) {
     return []
@@ -24,7 +23,7 @@ function categoriesToKeep(input: Record<string, unknown>, rootCategories: string
   return [...rootCategories, ...categoriesToKeep(input, cats)]
 }
 
-export function mMarketGroups(input: unknown): unknown {
+export function mMarketGroups(input: unknown): Record<string, unknown> {
   /*
     4,  # Ship
     9,  # Ship Equipment
@@ -41,7 +40,6 @@ export function mMarketGroups(input: unknown): unknown {
   }
 
   const cats = categoriesToKeep(input, rootCategories)
-  console.log(cats)
 
   // recusively keep only categories that are in rootCategories
   const output: Record<string, unknown> = {}
@@ -51,7 +49,10 @@ export function mMarketGroups(input: unknown): unknown {
         throw new Error('Value is not an object')
       }
 
-      value.parentGroupID = '0'
+      if (rootCategories.includes(key)) {
+        value.parentGroupID = '0'
+      }
+
       output[key] = value
     }
   }
