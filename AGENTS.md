@@ -17,6 +17,7 @@
 ## Development and verification
 
 - Use the Node version in `.nvmrc`. Install dependencies with `npm ci` and start Vite with `npm run dev`.
+- Use test-driven development (TDD) for every new feature and bug fix. Start with a test that specifies the new behavior or reproduces the bug. Confirm that it fails for the expected reason before changing the implementation. Make the smallest change that passes the test, then refactor as needed and rerun the relevant tests.
 - Run `npm run typecheck` and `npm test` for code changes. Use `*.test.ts` for Node tests in `tests/unit/` and `tests/contract/`.
 - Run `npm run test:parity` for fitting or catalog changes to check results against the pinned Pyfa baseline.
 - Run `npm run test:e2e` for browser behavior changes. It builds the app and runs the Playwright `tests/e2e/*.spec.ts` suite. Install browsers with `npm run test:browsers` if needed. Use `npm run build` and `npm run preview` to check the production build manually.
