@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","x-sde-key":"typeID","type":"object","required":["typeID","attributeIDs","inputOutputMapping"],"properties":{"typeID":{"type":"integer"},"attributeIDs":{"type":"array"},"inputOutputMapping":{"type":"array"}}}

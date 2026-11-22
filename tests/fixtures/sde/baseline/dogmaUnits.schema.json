@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","x-sde-key":"unitID","type":"object","required":["unitID","name"],"properties":{"unitID":{"type":"integer"},"name":{"type":"string"}}}

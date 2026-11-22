@@ -1,0 +1,57 @@
+name: Verify EVE updates
+
+on:
+  schedule:
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sde:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Stage and verify CCP candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm run --silent data:update > sde-summary.json
+          candidate="$(node -p 'require("./sde-summary.json").candidateId || ""')"
+          if test -n "$candidate"; then
+            npm run data:verify -- --candidate "$candidate"
+          fi
+      - uses: actions/upload-artifact@v6
+        if: always()
+        with:
+          name: sde-verification
+          path: |
+            sde-summary.json
+            .yaft/reports/*.json
+            .yaft/candidates/**
+          include-hidden-files: true
+          if-no-files-found: warn
+
+  pyfa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run pyfa:check
+      - uses: actions/upload-artifact@v6
+        if: always()
+        with:
+          name: pyfa-verification
+          path: .yaft/reports/pyfa-check.json
+          include-hidden-files: true
+          if-no-files-found: warn

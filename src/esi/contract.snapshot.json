@@ -1,0 +1,355 @@
+{
+  "formatVersion": 1,
+  "date": "2026-11-19",
+  "source": "https://esi.evetech.net/meta/openapi.json?compatibility_date=2026-11-19",
+  "sha256": "941beff08df895e85664d3a754169451516dd47c3eae0514c0614584ff3a52e2",
+  "operations": {
+    "skills": {
+      "path": "/characters/{character_id}/skills",
+      "method": "GET",
+      "success": "200",
+      "scopes": [
+        "esi-skills.read_skills.v1"
+      ],
+      "pathParameters": {
+        "character_id": {
+          "format": "int64",
+          "type": "integer"
+        }
+      },
+      "response": {
+        "properties": {
+          "skills": {
+            "items": {
+              "properties": {
+                "active_skill_level": {
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "skill_id": {
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "skillpoints_in_skill": {
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "trained_skill_level": {
+                  "format": "int64",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "active_skill_level",
+                "skill_id",
+                "skillpoints_in_skill",
+                "trained_skill_level"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "total_sp": {
+            "format": "int64",
+            "type": "integer"
+          },
+          "unallocated_sp": {
+            "format": "int64",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "skills",
+          "total_sp"
+        ],
+        "type": "object"
+      },
+      "request": null
+    },
+    "listFits": {
+      "path": "/characters/{character_id}/fittings",
+      "method": "GET",
+      "success": "200",
+      "scopes": [
+        "esi-fittings.read_fittings.v1"
+      ],
+      "pathParameters": {
+        "character_id": {
+          "format": "int64",
+          "type": "integer"
+        }
+      },
+      "response": {
+        "items": {
+          "properties": {
+            "description": {
+              "type": "string"
+            },
+            "fitting_id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "items": {
+              "items": {
+                "properties": {
+                  "flag": {
+                    "enum": [
+                      "Cargo",
+                      "DroneBay",
+                      "FighterBay",
+                      "HiSlot0",
+                      "HiSlot1",
+                      "HiSlot2",
+                      "HiSlot3",
+                      "HiSlot4",
+                      "HiSlot5",
+                      "HiSlot6",
+                      "HiSlot7",
+                      "Invalid",
+                      "LoSlot0",
+                      "LoSlot1",
+                      "LoSlot2",
+                      "LoSlot3",
+                      "LoSlot4",
+                      "LoSlot5",
+                      "LoSlot6",
+                      "LoSlot7",
+                      "MedSlot0",
+                      "MedSlot1",
+                      "MedSlot2",
+                      "MedSlot3",
+                      "MedSlot4",
+                      "MedSlot5",
+                      "MedSlot6",
+                      "MedSlot7",
+                      "RigSlot0",
+                      "RigSlot1",
+                      "RigSlot2",
+                      "ServiceSlot0",
+                      "ServiceSlot1",
+                      "ServiceSlot2",
+                      "ServiceSlot3",
+                      "ServiceSlot4",
+                      "ServiceSlot5",
+                      "ServiceSlot6",
+                      "ServiceSlot7",
+                      "SubSystemSlot0",
+                      "SubSystemSlot1",
+                      "SubSystemSlot2",
+                      "SubSystemSlot3"
+                    ],
+                    "type": "string"
+                  },
+                  "quantity": {
+                    "format": "int64",
+                    "type": "integer"
+                  },
+                  "type_id": {
+                    "format": "int64",
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "flag",
+                  "quantity",
+                  "type_id"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "name": {
+              "type": "string"
+            },
+            "ship_type_id": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "description",
+            "fitting_id",
+            "items",
+            "name",
+            "ship_type_id"
+          ],
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "request": null
+    },
+    "createFit": {
+      "path": "/characters/{character_id}/fittings",
+      "method": "POST",
+      "success": "201",
+      "scopes": [
+        "esi-fittings.write_fittings.v1"
+      ],
+      "pathParameters": {
+        "character_id": {
+          "format": "int64",
+          "type": "integer"
+        }
+      },
+      "response": {
+        "properties": {
+          "fitting_id": {
+            "format": "int64",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "fitting_id"
+        ],
+        "type": "object"
+      },
+      "request": {
+        "properties": {
+          "description": {
+            "maxLength": 500,
+            "type": "string"
+          },
+          "items": {
+            "items": {
+              "properties": {
+                "flag": {
+                  "enum": [
+                    "Cargo",
+                    "DroneBay",
+                    "FighterBay",
+                    "HiSlot0",
+                    "HiSlot1",
+                    "HiSlot2",
+                    "HiSlot3",
+                    "HiSlot4",
+                    "HiSlot5",
+                    "HiSlot6",
+                    "HiSlot7",
+                    "Invalid",
+                    "LoSlot0",
+                    "LoSlot1",
+                    "LoSlot2",
+                    "LoSlot3",
+                    "LoSlot4",
+                    "LoSlot5",
+                    "LoSlot6",
+                    "LoSlot7",
+                    "MedSlot0",
+                    "MedSlot1",
+                    "MedSlot2",
+                    "MedSlot3",
+                    "MedSlot4",
+                    "MedSlot5",
+                    "MedSlot6",
+                    "MedSlot7",
+                    "RigSlot0",
+                    "RigSlot1",
+                    "RigSlot2",
+                    "ServiceSlot0",
+                    "ServiceSlot1",
+                    "ServiceSlot2",
+                    "ServiceSlot3",
+                    "ServiceSlot4",
+                    "ServiceSlot5",
+                    "ServiceSlot6",
+                    "ServiceSlot7",
+                    "SubSystemSlot0",
+                    "SubSystemSlot1",
+                    "SubSystemSlot2",
+                    "SubSystemSlot3"
+                  ],
+                  "type": "string"
+                },
+                "quantity": {
+                  "format": "int64",
+                  "type": "integer"
+                },
+                "type_id": {
+                  "format": "int64",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "flag",
+                "quantity",
+                "type_id"
+              ],
+              "type": "object"
+            },
+            "maxItems": 512,
+            "minItems": 1,
+            "type": "array"
+          },
+          "name": {
+            "maxLength": 50,
+            "minLength": 1,
+            "type": "string"
+          },
+          "ship_type_id": {
+            "format": "int64",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "description",
+          "items",
+          "name",
+          "ship_type_id"
+        ],
+        "type": "object"
+      }
+    },
+    "deleteFit": {
+      "path": "/characters/{character_id}/fittings/{fitting_id}",
+      "method": "DELETE",
+      "success": "204",
+      "scopes": [
+        "esi-fittings.write_fittings.v1"
+      ],
+      "pathParameters": {
+        "character_id": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "fitting_id": {
+          "format": "int64",
+          "type": "integer"
+        }
+      },
+      "response": null,
+      "request": null
+    },
+    "prices": {
+      "path": "/markets/prices",
+      "method": "GET",
+      "success": "200",
+      "scopes": [],
+      "pathParameters": {},
+      "response": {
+        "items": {
+          "properties": {
+            "adjusted_price": {
+              "format": "double",
+              "type": "number"
+            },
+            "average_price": {
+              "format": "double",
+              "type": "number"
+            },
+            "type_id": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "type_id"
+          ],
+          "type": "object"
+        },
+        "type": "array"
+      },
+      "request": null
+    }
+  }
+}

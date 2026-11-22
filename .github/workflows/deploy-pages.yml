@@ -1,0 +1,57 @@
+name: Deploy YAFT to GitHub Pages
+
+on:
+  push:
+    branches: [release]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - uses: actions/configure-pages@v6
+        id: pages
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run test:parity
+      - name: Build for Pages
+        env:
+          YAFT_PAGES_BASE: ${{ steps.pages.outputs.base_path }}/
+          VITE_EVE_CLIENT_ID: ${{ vars.VITE_EVE_CLIENT_ID }}
+        run: npm run build -- --base "$YAFT_PAGES_BASE"
+      - run: npx playwright install --with-deps --only-shell chromium
+      - name: Verify the published layout
+        env:
+          YAFT_PAGES_BASE: ${{ steps.pages.outputs.base_path }}/
+        run: npm run test:pages
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v5
+        id: deployment

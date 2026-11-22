@@ -1,0 +1,126 @@
+{
+  "release": "20260101T000000Z",
+  "buildNumber": 1,
+  "releaseDate": "2026-01-01T00:00:00Z",
+  "tables": {
+    "types": {
+      "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "jsonl": {
+        "url": "types.jsonl",
+        "recordSchemaUrl": "types.schema.json"
+      }
+    },
+    "groups": {
+      "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "jsonl": {
+        "url": "groups.jsonl",
+        "recordSchemaUrl": "groups.schema.json"
+      }
+    },
+    "categories": {
+      "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "jsonl": {
+        "url": "categories.jsonl",
+        "recordSchemaUrl": "categories.schema.json"
+      }
+    },
+    "marketGroups": {
+      "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "jsonl": {
+        "url": "marketGroups.jsonl",
+        "recordSchemaUrl": "marketGroups.schema.json"
+      }
+    },
+    "metaGroups": {
+      "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "jsonl": {
+        "url": "metaGroups.jsonl",
+        "recordSchemaUrl": "metaGroups.schema.json"
+      }
+    },
+    "typeDogma": {
+      "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "jsonl": {
+        "url": "typeDogma.jsonl",
+        "recordSchemaUrl": "typeDogma.schema.json"
+      }
+    },
+    "dogmaAttributes": {
+      "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "jsonl": {
+        "url": "dogmaAttributes.jsonl",
+        "recordSchemaUrl": "dogmaAttributes.schema.json"
+      }
+    },
+    "dogmaEffects": {
+      "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "jsonl": {
+        "url": "dogmaEffects.jsonl",
+        "recordSchemaUrl": "dogmaEffects.schema.json"
+      }
+    },
+    "dogmaUnits": {
+      "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "jsonl": {
+        "url": "dogmaUnits.jsonl",
+        "recordSchemaUrl": "dogmaUnits.schema.json"
+      }
+    },
+    "dynamicItemAttributes": {
+      "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "jsonl": {
+        "url": "dynamicItemAttributes.jsonl",
+        "recordSchemaUrl": "dynamicItemAttributes.schema.json"
+      }
+    },
+    "dbuffCollections": {
+      "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "jsonl": {
+        "url": "dbuffCollections.jsonl",
+        "recordSchemaUrl": "dbuffCollections.schema.json"
+      }
+    },
+    "typeBonus": {
+      "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "jsonl": {
+        "url": "typeBonus.jsonl",
+        "recordSchemaUrl": "typeBonus.schema.json"
+      }
+    },
+    "cloneGrades": {
+      "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "jsonl": {
+        "url": "cloneGrades.jsonl",
+        "recordSchemaUrl": "cloneGrades.schema.json"
+      }
+    },
+    "fighterAbilities": {
+      "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "jsonl": {
+        "url": "fighterAbilities.jsonl",
+        "recordSchemaUrl": "fighterAbilities.schema.json"
+      }
+    },
+    "fighterAbilitiesByType": {
+      "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "jsonl": {
+        "url": "fighterAbilitiesByType.jsonl",
+        "recordSchemaUrl": "fighterAbilitiesByType.schema.json"
+      }
+    },
+    "systemDbuffEmitters": {
+      "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "jsonl": {
+        "url": "systemDbuffEmitters.jsonl",
+        "recordSchemaUrl": "systemDbuffEmitters.schema.json"
+      }
+    },
+    "systemWideEffects": {
+      "version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "jsonl": {
+        "url": "systemWideEffects.jsonl",
+        "recordSchemaUrl": "systemWideEffects.schema.json"
+      }
+    }
+  }
+}

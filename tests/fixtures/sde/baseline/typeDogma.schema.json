@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","x-sde-key":"typeID","type":"object","required":["typeID","dogmaAttributes","dogmaEffects"],"properties":{"typeID":{"type":"integer"},"dogmaAttributes":{"type":"array"},"dogmaEffects":{"type":"array"}}}

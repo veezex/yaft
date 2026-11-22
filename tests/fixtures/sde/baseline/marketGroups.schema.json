@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","x-sde-key":"marketGroupID","type":"object","required":["marketGroupID","hasTypes","name"],"properties":{"marketGroupID":{"type":"integer"},"hasTypes":{"type":"boolean"},"name":{}}}

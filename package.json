@@ -1,0 +1,45 @@
+{
+  "name": "yaft",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^24.21.0 || ^26.13.1"
+  },
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc --noEmit",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node --test 'tests/**/*.test.ts'",
+    "test:browsers": "playwright install chromium firefox webkit",
+    "test:e2e": "npm run build && playwright test",
+    "test:pages": "playwright test --config playwright.pages.config.ts",
+    "data:import": "node scripts/data/import.ts",
+    "pyfa:fixtures": "node scripts/pyfa/fixtures.ts",
+    "test:parity": "node scripts/pyfa/parity.ts",
+    "esi:import": "node scripts/esi/import.ts",
+    "esi:update": "node scripts/esi/update.ts",
+    "data:update": "node scripts/data/update.ts",
+    "data:verify": "node scripts/data/verify.ts",
+    "data:publish": "node scripts/data/publish.ts",
+    "data:rollback": "node scripts/data/rollback.ts",
+    "pyfa:check": "node scripts/pyfa/check.ts"
+  },
+  "dependencies": {
+    "eve-fit-engine": "0.2.28",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "saxes": "6.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.1",
+    "@types/node": "24.13.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.3.0",
+    "ajv": "8.20.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.8"
+  }
+}

@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","x-sde-key":"cloneGradeID","type":"object","required":["cloneGradeID","name","skills"],"properties":{"cloneGradeID":{"type":"integer"},"name":{"type":"string"},"skills":{"type":"array"}}}

@@ -1,0 +1,902 @@
+{
+  "formatVersion": 1,
+  "pyfa": {
+    "tag": "v2.70.0",
+    "commit": "e5483f8666ed2eda99c98985c59a29b07e3bb844",
+    "databaseSha256": "e4da05494ae7cf4a4cb63d3f5d0ecae0fcd9f833cc469ecd6f8eba4153f1755f",
+    "archiveSha256": "fb6e112f76c004d683d0861373824e52d3f816a3562697e708231b3454e90f8f"
+  },
+  "dataset": {
+    "releaseId": "20261120T165826Z",
+    "datasetSha256": "02c3797d832c655cf73dcf7401fd74e25c38b4e521926d16fbed0f7ff354eb56",
+    "engineRulesVersion": "eve-fit-engine@0.2.28+yaft.1"
+  },
+  "cases": [
+    {
+      "name": "rifter-bare",
+      "fit": {
+        "id": "rifter-bare",
+        "revision": 0,
+        "name": "rifter-bare",
+        "description": "",
+        "shipTypeId": 587,
+        "items": [],
+        "skillProfileId": "all-v",
+        "status": "draft",
+        "createdAt": "2026-11-20T16:58:26Z",
+        "updatedAt": "2026-11-20T16:58:26Z"
+      },
+      "expected": {
+        "cpuUsed": {
+          "status": "computed",
+          "unit": "tf",
+          "value": 0,
+          "displayStep": 0.01
+        },
+        "cpuMax": {
+          "status": "computed",
+          "unit": "tf",
+          "value": 162.5,
+          "displayStep": 0.01
+        },
+        "powerUsed": {
+          "status": "computed",
+          "unit": "MW",
+          "value": 0,
+          "displayStep": 0.01
+        },
+        "powerMax": {
+          "status": "computed",
+          "unit": "MW",
+          "value": 51.25,
+          "displayStep": 0.01
+        },
+        "calibrationUsed": {
+          "status": "computed",
+          "unit": "pt",
+          "value": 0,
+          "displayStep": 0.01
+        },
+        "calibrationMax": {
+          "status": "computed",
+          "unit": "pt",
+          "value": 400.0,
+          "displayStep": 0.01
+        },
+        "shieldHp": {
+          "status": "computed",
+          "unit": "HP",
+          "value": 562.5,
+          "displayStep": 0.01
+        },
+        "armorHp": {
+          "status": "computed",
+          "unit": "HP",
+          "value": 562.5,
+          "displayStep": 0.01
+        },
+        "hullHp": {
+          "status": "computed",
+          "unit": "HP",
+          "value": 437.5,
+          "displayStep": 0.01
+        },
+        "ehpTotal": {
+          "status": "computed",
+          "unit": "EHP",
+          "value": 2262.180476925716,
+          "displayStep": 0.01
+        },
+        "hull.em": {
+          "status": "computed",
+          "unit": "%",
+          "value": 32.99999999999999,
+          "displayStep": 0.01
+        },
+        "velocity": {
+          "status": "computed",
+          "unit": "m/s",
+          "value": 456.25,
+          "displayStep": 0.01
+        },
+        "align": {
+          "status": "computed",
+          "unit": "s",
+          "value": 3.195020339960234,
+          "displayStep": 0.01
+        },
+        "lockRange": {
+          "status": "computed",
+          "unit": "m",
+          "value": 28125.0,
+          "displayStep": 0.01
+        },
+        "targets": {
+          "status": "computed",
+          "unit": "",
+          "value": 4,
+          "discrete": true
+        },
+        "weaponDps": {
+          "status": "computed",
+          "unit": "DPS",
+          "value": 0,
+          "displayStep": 0.01
+        },
+        "droneDps": {
+          "status": "computed",
+          "unit": "DPS",
+          "value": 0,
+          "displayStep": 0.01
+        },
+        "totalDps": {
+          "status": "computed",
+          "unit": "DPS",
+          "value": 0,
+          "displayStep": 0.01
+        },
+        "alphaStrike": {
+          "status": "computed",
+          "unit": "HP",
+          "value": 0,
+          "displayStep": 0.01
+        },
+        "capacitor": {
+          "status": "computed",
+          "unit": "GJ",
+          "value": 312.5,
+          "displayStep": 0.01
+        },
+        "capacitorStable": {
+          "status": "computed",
+          "unit": "",
+          "value": true
+        },
+        "capacitorLevel": {
+          "status": "computed",
+          "unit": "%",
+          "value": 100,
+          "displayStep": 0.01
+        },
+        "capacitorTime": {
+          "status": "not-applicable",
+          "unit": "s"
+        }
+      }
+    },
+    {
+      "name": "punisher-damage-control",
+      "fit": {
+        "id": "punisher-damage-control",
+        "revision": 0,
+        "name": "punisher-damage-control",
+        "description": "",
+        "shipTypeId": 597,
+        "items": [
+          {
+            "id": "low-0",
+            "group": "low",
+            "typeId": 2048,
+            "position": 0,
+            "state": "online",
+            "quantity": 1
+          }
+        ],
+        "skillProfileId": "all-v",
+        "status": "draft",
+        "createdAt": "2026-11-20T16:58:26Z",
+        "updatedAt": "2026-11-20T16:58:26Z"
+      },
+      "expected": {
+        "cpuUsed": {
+          "status": "computed",
+          "unit": "tf",
+          "value": 30.0,
+          "displayStep": 0.01
+        },
+        "cpuMax": {
+          "status": "computed",
+          "unit": "tf",
+          "value": 175.0,
+          "displayStep": 0.01
+        },
+        "powerUsed": {
+          "status": "computed",
+          "unit": "MW",
+          "value": 1.0,
+          "displayStep": 0.01
+        },
+        "powerMax": {
+          "status": "computed",
+          "unit": "MW",
+          "value": 83.75,
+          "displayStep": 0.01
+        },
+        "calibrationUsed": {
+          "status": "computed",
+          "unit": "pt",
+          "value": 0.0,
+          "displayStep": 0.01
+        },
+        "calibrationMax": {
+          "status": "computed",
+          "unit": "pt",
+          "value": 400.0,
+          "displayStep": 0.01
+        },
+        "shieldHp": {
+          "status": "computed",
+          "unit": "HP",
+          "value": 437.5,
+          "displayStep": 0.01
+        },
+        "armorHp": {
+          "status": "computed",
+          "unit": "HP",
+          "value": 625.0,
+          "displayStep": 0.01
+        },
+        "hullHp": {
+          "status": "computed",
+          "unit": "HP",
+          "value": 562.5,
+          "displayStep": 0.01
+        },
+        "ehpTotal": {
+          "status": "computed",
+          "unit": "EHP",
+          "value": 3450.5646771775555,
+          "displayStep": 0.01
+        },
+        "hull.em": {
+          "status": "computed",
+          "unit": "%",
+          "value": 59.8,
+          "displayStep": 0.01
+        },
+        "velocity": {
+          "status": "computed",
+          "unit": "m/s",
+          "value": 443.75,
+          "displayStep": 0.01
+        },
+        "align": {
+          "status": "computed",
+          "unit": "s",
+          "value": 3.229268742151701,
+          "displayStep": 0.01
+        },
+        "lockRange": {
+          "status": "computed",
+          "unit": "m",
+          "value": 31250.0,
+          "displayStep": 0.01
+        },
+        "targets": {
+          "status": "computed",
+          "unit": "",
+          "value": 4,
+          "discrete": true
+        },
+        "weaponDps": {
+          "status": "computed",
+          "unit": "DPS",
+          "value": 0,
+          "displayStep": 0.01
+        },
+        "droneDps": {
+          "status": "computed",
+          "unit": "DPS",
+          "value": 0,
+          "displayStep": 0.01
+        },
+        "totalDps": {
+          "status": "computed",
+          "unit": "DPS",
+          "value": 0,
+          "displayStep": 0.01
+        },
+        "alphaStrike": {
+          "status": "computed",
+          "unit": "HP",
+          "value": 0,
+          "displayStep": 0.01
+        },
+        "capacitor": {
+          "status": "computed",
+          "unit": "GJ",
+          "value": 500.0,
+          "displayStep": 0.01
+        },
+        "capacitorStable": {
+          "status": "computed",
+          "unit": "",
+          "value": true
+        },
+        "capacitorLevel": {
+          "status": "computed",
+          "unit": "%",
+          "value": 100,
+          "displayStep": 0.01
+        },
+        "capacitorTime": {
+          "status": "not-applicable",
+          "unit": "s"
+        }
+      }
+    },
+    {
+      "name": "rifter-propulsion",
+      "fit": {
+        "id": "rifter-propulsion",
+        "revision": 0,
+        "name": "rifter-propulsion",
+        "description": "",
+        "shipTypeId": 587,
+        "items": [
+          {
+            "id": "mid-0",
+            "group": "mid",
+            "typeId": 5973,
+            "position": 0,
+            "state": "active",
+            "quantity": 1
+          }
+        ],
+        "skillProfileId": "all-v",
+        "status": "draft",
+        "createdAt": "2026-11-20T16:58:26Z",
+        "updatedAt": "2026-11-20T16:58:26Z"
+      },
+      "expected": {
+        "cpuUsed": {
+          "status": "computed",
+          "unit": "tf",
+          "value": 21.0,
+          "displayStep": 0.01
+        },
+        "cpuMax": {
+          "status": "computed",
+          "unit": "tf",
+          "value": 162.5,
+          "displayStep": 0.01
+        },
+        "powerUsed": {
+          "status": "computed",
+          "unit": "MW",
+          "value": 14.0,
+          "displayStep": 0.01
+        },
+        "powerMax": {
+          "status": "computed",
+          "unit": "MW",
+          "value": 51.25,
+          "displayStep": 0.01
+        },
+        "calibrationUsed": {
+          "status": "computed",
+          "unit": "pt",
+          "value": 0.0,
+          "displayStep": 0.01
+        },
+        "calibrationMax": {
+          "status": "computed",
+          "unit": "pt",
+          "value": 400.0,
+          "displayStep": 0.01
+        },
+        "shieldHp": {
+          "status": "computed",
+          "unit": "HP",
+          "value": 562.5,
+          "displayStep": 0.01
+        },
+        "armorHp": {
+          "status": "computed",
+          "unit": "HP",
+          "value": 562.5,
+          "displayStep": 0.01
+        },
+        "hullHp": {
+          "status": "computed",
+          "unit": "HP",
+          "value": 437.5,
+          "displayStep": 0.01
+        },
+        "ehpTotal": {
+          "status": "computed",
+          "unit": "EHP",
+          "value": 2262.180476925716,
+          "displayStep": 0.01
+        },
+        "hull.em": {
+          "status": "computed",
+          "unit": "%",
+          "value": 32.99999999999999,
+          "displayStep": 0.01
+        },
+        "velocity": {
+          "status": "computed",
+          "unit": "m/s",
+          "value": 3213.1850271218887,
+          "displayStep": 0.01
+        },
+        "align": {
+          "status": "computed",
+          "unit": "s",
+          "value": 4.6922182499697165,
+          "displayStep": 0.01
+        },
+        "lockRange": {
+          "status": "computed",
+          "unit": "m",
+          "value": 28125.0,
+          "displayStep": 0.01
+        },
+        "targets": {
+          "status": "computed",
+          "unit": "",
+          "value": 4,
+          "discrete": true
+        },
+        "weaponDps": {
+          "status": "computed",
+          "unit": "DPS",
+          "value": 0.0,
+          "displayStep": 0.01
+        },
+        "droneDps": {
+          "status": "computed",
+          "unit": "DPS",
+          "value": 0,
+          "displayStep": 0.01
+        },
+        "totalDps": {
+          "status": "computed",
+          "unit": "DPS",
+          "value": 0.0,
+          "displayStep": 0.01
+        },
+        "alphaStrike": {
+          "status": "computed",
+          "unit": "HP",
+          "value": 0.0,
+          "displayStep": 0.01
+        },
+        "capacitor": {
+          "status": "computed",
+          "unit": "GJ",
+          "value": 234.375,
+          "displayStep": 0.01
+        },
+        "capacitorStable": {
+          "status": "computed",
+          "unit": "",
+          "value": true
+        },
+        "capacitorLevel": {
+          "status": "computed",
+          "unit": "%",
+          "value": 69.82397211563584,
+          "displayStep": 0.01
+        },
+        "capacitorTime": {
+          "status": "not-applicable",
+          "unit": "s"
+        }
+      }
+    },
+    {
+      "name": "rifter-projectile",
+      "fit": {
+        "id": "rifter-projectile",
+        "revision": 0,
+        "name": "rifter-projectile",
+        "description": "",
+        "shipTypeId": 587,
+        "items": [
+          {
+            "id": "high-0",
+            "group": "high",
+            "typeId": 2889,
+            "position": 0,
+            "state": "active",
+            "quantity": 1,
+            "charge": {
+              "typeId": 185
+            }
+          }
+        ],
+        "skillProfileId": "all-v",
+        "status": "draft",
+        "createdAt": "2026-11-20T16:58:26Z",
+        "updatedAt": "2026-11-20T16:58:26Z"
+      },
+      "expected": {
+        "cpuUsed": {
+          "status": "computed",
+          "unit": "tf",
+          "value": 6.75,
+          "displayStep": 0.01
+        },
+        "cpuMax": {
+          "status": "computed",
+          "unit": "tf",
+          "value": 162.5,
+          "displayStep": 0.01
+        },
+        "powerUsed": {
+          "status": "computed",
+          "unit": "MW",
+          "value": 3.6,
+          "displayStep": 0.01
+        },
+        "powerMax": {
+          "status": "computed",
+          "unit": "MW",
+          "value": 51.25,
+          "displayStep": 0.01
+        },
+        "calibrationUsed": {
+          "status": "computed",
+          "unit": "pt",
+          "value": 0.0,
+          "displayStep": 0.01
+        },
+        "calibrationMax": {
+          "status": "computed",
+          "unit": "pt",
+          "value": 400.0,
+          "displayStep": 0.01
+        },
+        "shieldHp": {
+          "status": "computed",
+          "unit": "HP",
+          "value": 562.5,
+          "displayStep": 0.01
+        },
+        "armorHp": {
+          "status": "computed",
+          "unit": "HP",
+          "value": 562.5,
+          "displayStep": 0.01
+        },
+        "hullHp": {
+          "status": "computed",
+          "unit": "HP",
+          "value": 437.5,
+          "displayStep": 0.01
+        },
+        "ehpTotal": {
+          "status": "computed",
+          "unit": "EHP",
+          "value": 2262.180476925716,
+          "displayStep": 0.01
+        },
+        "hull.em": {
+          "status": "computed",
+          "unit": "%",
+          "value": 32.99999999999999,
+          "displayStep": 0.01
+        },
+        "velocity": {
+          "status": "computed",
+          "unit": "m/s",
+          "value": 456.25,
+          "displayStep": 0.01
+        },
+        "align": {
+          "status": "computed",
+          "unit": "s",
+          "value": 3.195020339960234,
+          "displayStep": 0.01
+        },
+        "lockRange": {
+          "status": "computed",
+          "unit": "m",
+          "value": 28125.0,
+          "displayStep": 0.01
+        },
+        "targets": {
+          "status": "computed",
+          "unit": "",
+          "value": 4,
+          "discrete": true
+        },
+        "weaponDps": {
+          "status": "computed",
+          "unit": "DPS",
+          "value": 38.962,
+          "displayStep": 0.01
+        },
+        "droneDps": {
+          "status": "computed",
+          "unit": "DPS",
+          "value": 0,
+          "displayStep": 0.01
+        },
+        "totalDps": {
+          "status": "computed",
+          "unit": "DPS",
+          "value": 38.962,
+          "displayStep": 0.01
+        },
+        "alphaStrike": {
+          "status": "computed",
+          "unit": "HP",
+          "value": 65.748375,
+          "displayStep": 0.01
+        },
+        "capacitor": {
+          "status": "computed",
+          "unit": "GJ",
+          "value": 312.5,
+          "displayStep": 0.01
+        },
+        "capacitorStable": {
+          "status": "computed",
+          "unit": "",
+          "value": true
+        },
+        "capacitorLevel": {
+          "status": "computed",
+          "unit": "%",
+          "value": 100,
+          "displayStep": 0.01
+        },
+        "capacitorTime": {
+          "status": "not-applicable",
+          "unit": "s"
+        }
+      }
+    },
+    {
+      "name": "tristan-drones",
+      "fit": {
+        "id": "tristan-drones",
+        "revision": 0,
+        "name": "tristan-drones",
+        "description": "",
+        "shipTypeId": 593,
+        "items": [
+          {
+            "id": "drone",
+            "group": "drone",
+            "typeId": 2456,
+            "quantity": 5,
+            "activeQuantity": 5
+          }
+        ],
+        "skillProfileId": "all-v",
+        "status": "draft",
+        "createdAt": "2026-11-20T16:58:26Z",
+        "updatedAt": "2026-11-20T16:58:26Z"
+      },
+      "expected": {
+        "cpuUsed": {
+          "status": "computed",
+          "unit": "tf",
+          "value": 0,
+          "displayStep": 0.01
+        },
+        "cpuMax": {
+          "status": "computed",
+          "unit": "tf",
+          "value": 162.5,
+          "displayStep": 0.01
+        },
+        "powerUsed": {
+          "status": "computed",
+          "unit": "MW",
+          "value": 0,
+          "displayStep": 0.01
+        },
+        "powerMax": {
+          "status": "computed",
+          "unit": "MW",
+          "value": 43.75,
+          "displayStep": 0.01
+        },
+        "calibrationUsed": {
+          "status": "computed",
+          "unit": "pt",
+          "value": 0,
+          "displayStep": 0.01
+        },
+        "calibrationMax": {
+          "status": "computed",
+          "unit": "pt",
+          "value": 400.0,
+          "displayStep": 0.01
+        },
+        "shieldHp": {
+          "status": "computed",
+          "unit": "HP",
+          "value": 437.5,
+          "displayStep": 0.01
+        },
+        "armorHp": {
+          "status": "computed",
+          "unit": "HP",
+          "value": 562.5,
+          "displayStep": 0.01
+        },
+        "hullHp": {
+          "status": "computed",
+          "unit": "HP",
+          "value": 687.5,
+          "displayStep": 0.01
+        },
+        "ehpTotal": {
+          "status": "computed",
+          "unit": "EHP",
+          "value": 2462.9010121804768,
+          "displayStep": 0.01
+        },
+        "hull.em": {
+          "status": "computed",
+          "unit": "%",
+          "value": 32.99999999999999,
+          "displayStep": 0.01
+        },
+        "velocity": {
+          "status": "computed",
+          "unit": "m/s",
+          "value": 393.75,
+          "displayStep": 0.01
+        },
+        "align": {
+          "status": "computed",
+          "unit": "s",
+          "value": 3.360610428807283,
+          "displayStep": 0.01
+        },
+        "lockRange": {
+          "status": "computed",
+          "unit": "m",
+          "value": 50000.0,
+          "displayStep": 0.01
+        },
+        "targets": {
+          "status": "computed",
+          "unit": "",
+          "value": 5,
+          "discrete": true
+        },
+        "weaponDps": {
+          "status": "computed",
+          "unit": "DPS",
+          "value": 0,
+          "displayStep": 0.01
+        },
+        "droneDps": {
+          "status": "computed",
+          "unit": "DPS",
+          "value": 99.0,
+          "displayStep": 0.01
+        },
+        "totalDps": {
+          "status": "computed",
+          "unit": "DPS",
+          "value": 99.0,
+          "displayStep": 0.01
+        },
+        "alphaStrike": {
+          "status": "computed",
+          "unit": "HP",
+          "value": 396.0,
+          "displayStep": 0.01
+        },
+        "capacitor": {
+          "status": "computed",
+          "unit": "GJ",
+          "value": 437.5,
+          "displayStep": 0.01
+        },
+        "capacitorStable": {
+          "status": "computed",
+          "unit": "",
+          "value": true
+        },
+        "capacitorLevel": {
+          "status": "computed",
+          "unit": "%",
+          "value": 100,
+          "displayStep": 0.01
+        },
+        "capacitorTime": {
+          "status": "not-applicable",
+          "unit": "s"
+        }
+      }
+    },
+    {
+      "name": "venture-miner",
+      "fit": {
+        "id": "venture-miner",
+        "revision": 0,
+        "name": "venture-miner",
+        "description": "",
+        "shipTypeId": 32880,
+        "items": [
+          {
+            "id": "high-0",
+            "group": "high",
+            "typeId": 482,
+            "position": 0,
+            "state": "active",
+            "quantity": 1
+          }
+        ],
+        "skillProfileId": "all-v",
+        "status": "draft",
+        "createdAt": "2026-11-20T16:58:26Z",
+        "updatedAt": "2026-11-20T16:58:26Z"
+      },
+      "expected": {
+        "cpuUsed": {
+          "status": "computed",
+          "unit": "tf",
+          "value": 80.0,
+          "displayStep": 0.01
+        },
+        "powerUsed": {
+          "status": "computed",
+          "unit": "MW",
+          "value": 4.0,
+          "displayStep": 0.01
+        },
+        "mining": {
+          "status": "computed",
+          "unit": "m\u00b3/min",
+          "value": 243.1640625,
+          "displayStep": 0.01
+        }
+      }
+    },
+    {
+      "name": "bantam-repair",
+      "fit": {
+        "id": "bantam-repair",
+        "revision": 0,
+        "name": "bantam-repair",
+        "description": "",
+        "shipTypeId": 582,
+        "items": [
+          {
+            "id": "high-0",
+            "group": "high",
+            "typeId": 3588,
+            "position": 0,
+            "state": "active",
+            "quantity": 1
+          }
+        ],
+        "skillProfileId": "all-v",
+        "status": "draft",
+        "createdAt": "2026-11-20T16:58:26Z",
+        "updatedAt": "2026-11-20T16:58:26Z"
+      },
+      "expected": {
+        "cpuUsed": {
+          "status": "computed",
+          "unit": "tf",
+          "value": 34.0,
+          "displayStep": 0.01
+        },
+        "powerUsed": {
+          "status": "computed",
+          "unit": "MW",
+          "value": 4.0,
+          "displayStep": 0.01
+        },
+        "remoteShield": {
+          "status": "computed",
+          "unit": "HP/s",
+          "value": 31.875,
+          "displayStep": 0.01
+        }
+      }
+    }
+  ]
+}
